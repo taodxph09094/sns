@@ -1,0 +1,69 @@
+
+ {{>header}}
+{{>banner}}
+
+    <!-- Custom CSS -->
+
+    {{!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Remix icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css"> --}}
+    <link rel="stylesheet" href="/css/card.css">
+  <div class="container">
+        <main class="grid">
+
+                {{#each books}}
+            <article>
+                <a href="/pr-sach/{{this.slug}}"> <img src="img/img_avatar.png" alt="{{this.title}}"></a>
+                <div class="text">
+                    <div class="blog-details">
+                      <a href="/pr-sach/{{this.slug}}">  <h5 class="blog-title">
+                               {{this.title}}
+                        </h5>
+                        </a>
+                         </div>
+                    <div class="card_body">
+                    <div class="blog-excerpt">
+                        <p>{{this.desc}}</p>
+                      </div>
+                </div>
+                </div>
+
+
+            </article>
+            {{/each}}
+        </main>
+    </div>
+
+
+ {{!-- <div class="container">
+    <div class="row">
+
+        <div class="col-lg-8">
+                    <!-- Nested row for non-featured blog posts-->
+                    <div class="row">
+                        {{#each books}}
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#"><img class="card-img-top" src="{{this.img}}" alt="{{this.title}}" /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">{{this.createdAt}}</div>
+                                     <a href="#">
+                            <h2 class="card-title">{{this.title}}</h2>
+                            </a>
+                            <p class="card-text">{{this.desc}}</p>
+                            <a class="btn btn-primary" href="#!">Xem →</a>
+                                </div>
+                            </div>
+                        </div>
+                         {{/each}}
+                    </div>
+                </div>
+                <!-- Side widgets-->
+
+                </div>
+            </div> --}}
+
+

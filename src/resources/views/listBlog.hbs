@@ -1,0 +1,31 @@
+
+ {{>header}}
+{{>banner}}
+
+    <link rel="stylesheet" href="/css/card.css">
+  <div class="container">
+        <main class="grid">
+
+                {{#each courses}}
+            <article>
+                <a href="/blog/{{this.slug}}"> <img src="{{this.img}}" alt="{{this.title}}"></a>
+                <div class="text">
+                    <div class="blog-details">
+                      <a href="blog/{{this.slug}}">  <h5 class="blog-title">
+                               {{this.title}}
+                        </h5>
+                        </a>
+                         </div>
+                    <div class="card_body">
+                    <div class="blog-excerpt">
+                        <p>{{this.desc}}</p>
+                      </div>
+                </div>
+                </div>
+
+            </article>
+            {{/each}}
+        </main>
+    </div>
+
+

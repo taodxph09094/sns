@@ -1,0 +1,112 @@
+{{!-- <div class="mt-4">
+    <h3>sua khoa hoc</h3>
+<form method="POST" action="/courses/{{course._id}}?_method=PUT">
+  <div class="mb-3">
+    <label for="desc" class="form-label">Mo ta</label>
+    <textarea  class="form-control" id="desc" name="desc">{{course.desc}}</textarea>
+  </div>
+ <div class="mb-3">
+    <label for="name" class="form-label">title</label>
+    <input type="text" class="form-control" value="{{course.title}}"  id="title" name="title">
+  </div>
+<div class="mb-3">
+    <label for="img" class="form-label">Anh</label>
+    <textarea class="form-control"  id="img" name="img">{{course.img}}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Luu lai</button>
+</form>
+</div> --}}
+
+
+
+    <div class="hold-transition sidebar-mini layout-fixed">
+            {{>admin-header}}
+            {{>admin-sidebar}}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Sửa bài viết</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+              <li class="breadcrumb-item active">Sửa bài viết</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- /.col -->
+          <form method="POST" action="/blog/{{course._id}}?_method=PUT">
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">Hiện tại chưa thể upload ảnh từ máy lên website, thay vào đó hay gán link ảnh. Hệ thống sẽ được cập nhất thường xuyên. Xin cảm ơn</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="form-group">
+                  <input class="form-control" value="{{course.title}}" type="text" id="title" name="title">
+                </div>
+                <div class="form-group">
+                  <input class="form-control"  value="{{course.desc}}"  type="text" id="desc" name="desc">
+                </div>
+                <div class="form-group">
+                  <input class="form-control"  value="{{course.img}}" type="text" id="img" name="img">
+                </div>
+                <div class="form-group">
+                    <textarea id="content" type="text" name="content" class="form-control" style="height: 400px; width: 100%" >
+                       {{course.content}}
+                    </textarea>
+                </div>
+                <div class="form-group">
+
+                  <p class="help-block">Tính SEO sẽ được cập nhật sau.</p>
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <div class="float-right">
+
+                  <button type="submit" class="btn btn-primary"><i class="far fa-envelope"></i> Lưu lại</button>
+                </div>
+                <button type="reset" class="btn btn-default"><i class="fas fa-times"></i> Thoát</button>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+            </form>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+  <!-- Control Sidebar -->
+
+               {{>admin-footer}}
+
+  <!-- /.control-sidebar -->
+
+<script src="https://raw.githack.com/jeypips/AdminLTE3/master/plugins/jquery/jquery.min.js"></script>
+    <script src="https://raw.githack.com/jeypips/AdminLTE3/master/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="https://raw.githack.com/jeypips/AdminLTE3/master/plugins/summernote/summernote-bs4.min.js"></script>
+</div>
+
